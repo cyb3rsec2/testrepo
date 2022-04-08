@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>clientTest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to My App</h1>
+    <!--
+    	element.style {
+    background: linear-gradient(45deg, #cf2626, #cd109b);
+}
+    -->
+    <div id="login"></div>
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/2.0.0/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+    <script>
+        const ds = catalyst.table;
+        const table = ds.tableId(8446000000072001);
+        table.get().then((res) => {
+            console.log(res.content);
+        });
+    </script>
+</body>
+</html>
